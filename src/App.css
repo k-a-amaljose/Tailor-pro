@@ -1,1 +1,19 @@
-/** Css code for app.jsx
+/** Css code for app.jsx**/
+
+@import "./Components/Sidebar/Sidebar.css";
+@import "./Components/Searchbar/Searchbar.css";
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
