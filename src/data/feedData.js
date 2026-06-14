@@ -15,7 +15,7 @@ const feedData = [
     type: "image",
     tailorName: "Sarah Designs",
     profilePic: tailor1,
-    likes: "2.4k",
+    likes: 239,
   },
 
   {
@@ -24,7 +24,7 @@ const feedData = [
     type: "image",
     tailorName: "Elite Tailors",
     profilePic: tailor2,
-    likes: "1.8k",
+    likes: 67,
   },
 
   {
@@ -33,7 +33,7 @@ const feedData = [
     type: "image",
     tailorName: "Fashion Hub",
     profilePic: tailor3,
-    likes: "3.1k",
+    likes: 455,
   },
 
   {
@@ -42,7 +42,7 @@ const feedData = [
     type: "image",
     tailorName: "Fashion Hub",
     profilePic: tailor4,
-    likes: "3.6k",
+    likes: 987,
   },
 ];
 
