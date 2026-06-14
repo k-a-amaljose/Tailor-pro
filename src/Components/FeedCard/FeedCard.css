@@ -1,0 +1,101 @@
+.feed-card {
+  position: relative;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: white;
+  border: 1px solid #ececec;
+
+  transition: 0.3s;
+}
+
+.feed-card:hover {
+  transform: translateY(-4px);
+}
+
+.feed-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/**button**/
+.save-btn {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+/**video icon**/
+
+.video-icon {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.55);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**bottom section**/
+
+.feed-info {
+  padding: 14px;
+}
+
+.likes-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/**profile image**/
+
+.tailor-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+.tailor-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}

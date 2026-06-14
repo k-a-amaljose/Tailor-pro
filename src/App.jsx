@@ -1,17 +1,10 @@
 import "./App.css";
-import Sidebar from "./Components/Sidebar/Sidebar";
-import SearchBar from "./Components/Searchbar/Searchbar";
+import Following from "./Pages/Following/Following";
 
 function App() {
 return (
         <>
-        <div className="dashboard">
-  <Sidebar />
-  <div className="main-content">
-    <SearchBar />
-  </div>
-</div>
-       
+        <Following/>
         </>
 
 );
