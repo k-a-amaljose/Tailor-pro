@@ -1,0 +1,21 @@
+.home-page {
+  display: flex;
+  height: 100vh;
+}
+
+.home-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.top-bar > *:first-child {
+  flex: 1;
+}

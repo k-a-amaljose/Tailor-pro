@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Home,
   Store,
@@ -11,20 +10,23 @@ import {
   Settings,
 } from "lucide-react";
 
+import { useNavigate, useLocation } from "react-router-dom";
+
 function Sidebar() {
-  const [activeItem, setActiveItem] = useState("Home");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
-    { name: "Home", icon: Home },
-    { name: "Boutiques", icon: Store },
-    { name: "Following", icon: Users },
-    { name: "Cart", icon: ShoppingCart },
-    { name: "Saved", icon: Bookmark },
-    { name: "Messages", icon: MessageCircle },
-    { name: "Notifications", icon: Bell },
-    { name: "Profile", icon: User },
-    { name: "Settings", icon: Settings },
-  ];
+  { name: "Home", icon: Home, path: "/" },
+  { name: "Boutiques", icon: Store, path: "/boutiques" },
+  { name: "Following", icon: Users, path: "/following" },
+  { name: "Booking", icon: ShoppingCart, path: "/bookings" },
+  { name: "Saved", icon: Bookmark, path: "/saved" },
+  { name: "Messages", icon: MessageCircle, path: "/messages" },
+  { name: "Notifications", icon: Bell, path: "/notifications" },
+  { name: "Profile", icon: User, path: "/profile" },
+  { name: "Settings", icon: Settings, path: "/settings" },
+];
 
   return (
     <aside className="sidebar">
@@ -40,9 +42,9 @@ function Sidebar() {
             <li
               key={item.name}
               className={`menu-item ${
-                activeItem === item.name ? "active" : ""
+                location.pathname === item.path ? "active" : ""
               }`}
-              onClick={() => setActiveItem(item.name)}
+              onClick={() => navigate(item.path)}
             >
               <Icon size={20} />
               <span>{item.name}</span>
