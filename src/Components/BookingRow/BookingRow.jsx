@@ -39,9 +39,9 @@ function BookingRow({ booking }) {
 
       <td>
         <span
-          className={`status-badge ${booking.status.toLowerCase()}`}
+          className={`status-badge ${(booking.status || "").toLowerCase()}`}
         >
-          {booking.status}
+          {booking.status || "Unknown"}
         </span>
       </td>
 

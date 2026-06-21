@@ -1,13 +1,19 @@
 import { Search } from "lucide-react";
 
-function SearchBar() {
+function SearchBar({
+  value = "",
+  onChange = () => {},
+  placeholder = "Search tailors, reels, designs...",
+}) {
   return (
     <div className="search-bar">
       <Search size={18} />
 
       <input
         type="text"
-        placeholder="Search tailors, reels, designs..."
+        value={value}
+        placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
       />
     </div>
   );

@@ -1,22 +1,37 @@
 import "./BookingTabs.css";
 
-function BookingTabs() {
+function BookingTabs({
+  activeFilter,
+  setActiveFilter,
+}) {
   return (
     <div className="booking-tabs">
 
-      <button className="active">
+      <button
+        className={activeFilter === "all" ? "active" : ""}
+        onClick={() => setActiveFilter("all")}
+      >
         All Bookings
       </button>
 
-      <button>
+      <button
+        className={activeFilter === "upcoming" ? "active" : ""}
+        onClick={() => setActiveFilter("upcoming")}
+      >
         Upcoming
       </button>
 
-      <button>
+      <button
+        className={activeFilter === "completed" ? "active" : ""}
+        onClick={() => setActiveFilter("completed")}
+      >
         Completed
       </button>
 
-      <button>
+      <button
+        className={activeFilter === "cancelled" ? "active" : ""}
+        onClick={() => setActiveFilter("cancelled")}
+      >
         Cancelled
       </button>
 
