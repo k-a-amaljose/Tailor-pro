@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import Following from "./Pages/Following/Following";
 import Bookings from "./Pages/Bookings/Bookings";
 import Boutiques from "./Pages/Boutiques/Boutiques";
+import Messages from "./Pages/Messages/Messages";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/following" element={<Following />} />
       <Route path="/bookings" element={<Bookings />} />
       <Route path="/boutiques" element={<Boutiques />} />
+      <Route path="/messages" element={<Messages />} />
     </Routes>
   );
 }
