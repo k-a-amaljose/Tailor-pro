@@ -1,0 +1,137 @@
+.ad-banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 320px; /* 👑 CRITICAL: Locks the vertical size so it stays a sleek banner, not a square */
+  overflow: hidden; /* Cleanly cuts off image spillover */
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  z-index: 10;
+}
+
+.ad-banner-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ad-banner-slide {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ad-banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 👑 CRITICAL: Forces the image to shrink and fill the 320px height perfectly without distorting */
+  object-position: center center;
+}
+
+/* Dark gradient mask for text readability */
+.ad-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.ad-banner-overlay h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  max-width: 400px;
+  line-height: 1.2;
+}
+
+.ad-banner-btn {
+  background-color: #ec4899;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ad-banner-btn:hover {
+  background-color: #db2777;
+}
+
+/* Premium Hover-to-Reveal Navigation Arrows */
+.ad-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100; /* Keeps them layered cleanly on top of tracks */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: opacity 0.3s ease, background-color 0.2s, transform 0.2s;
+  
+  opacity: 0; /* Hidden by default */
+  pointer-events: none; /* Prevents ghost-blocking when invisible */
+}
+
+/* Smooth fade-in only when the mouse enters the banner bounds */
+.ad-banner-container:hover .ad-arrow {
+  opacity: 1;
+  pointer-events: auto; /* Restores absolute clickability on hover */
+}
+
+.ad-arrow:hover {
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.ad-arrow.left { left: 20px; }
+.ad-arrow.right { right: 20px; }
+
+/* Navigation Dots Layout */
+.ad-banner-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 90;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ec4899;
+  width: 20px;
+  border-radius: 10px;
+}

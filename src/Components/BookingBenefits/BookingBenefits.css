@@ -1,0 +1,21 @@
+.booking-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.benefit {
+  background: white;
+  border: 1px solid #ececec;
+
+  border-radius: 16px;
+  padding: 24px;
+
+  text-align: center;
+}
+
+.benefit h4 {
+  margin-top: 12px;
+}

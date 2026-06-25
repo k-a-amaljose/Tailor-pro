@@ -1,0 +1,32 @@
+.booking-section {
+  flex: 1;
+
+  background: white;
+  border: 1px solid #ececec;
+
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mini-booking-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mini-booking-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.mini-booking-card button {
+  margin-left: auto;
+}

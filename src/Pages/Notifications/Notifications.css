@@ -1,0 +1,184 @@
+.notifications-page-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.5rem;
+}
+
+.notifications-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.notifications-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.mark-all-btn {
+  background: none;
+  border: none;
+  color: #ec4899; /* TailorPro Pink */
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.mark-all-btn:hover {
+  background-color: #fdf2f8;
+}
+
+/* Tab Filtering Headers */
+.notifications-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  background: #f1f5f9;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.tab-btn.active {
+  background: #ec4899;
+  color: #ffffff;
+}
+
+/* Individual Notification Items Card Track */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-item {
+  display: flex;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* 👑 CRITICAL: Unread Item Tint & Edge Border Highlight */
+.notification-item.unread-tint {
+  background-color: #fff9fb; /* Super soft pink brand tint */
+  border-left: 4px solid #ec4899; /* Pinned colored accent strip */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* Icon Type Badges Layout */
+.notification-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.notification-icon-badge.booking { background-color: #eff6ff; }
+.notification-icon-badge.drop { background-color: #fdf2f8; }
+.notification-icon-badge.status { background-color: #f0fdf4; }
+
+/* Text Blocks Content Structural Framework */
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.notification-item-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.notification-message {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+/* Explicit Custom In-Card Metadata Badge */
+.notification-date-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Visual Unread Status Notification Dot Indicator */
+.unread-pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ec4899;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px;
+  right: 18px;
+}
+
+.empty-notifications {
+  text-align: center;
+  padding: 3rem;
+  color: #94a3b8;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+}
