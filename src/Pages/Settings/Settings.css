@@ -1,0 +1,4 @@
+.settings-page { display:flex; min-height:100vh; background:#fafafa; }
+.settings-content { flex:1; padding:24px; }
+.settings-topbar { display:flex; justify-content:space-between; margin-bottom:24px; }
+.settings-layout { display:flex; gap:24px; }
