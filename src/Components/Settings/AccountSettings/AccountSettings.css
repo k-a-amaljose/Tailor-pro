@@ -1,0 +1,146 @@
+.account-section {
+  margin-bottom: 32px;
+}
+
+.account-section:last-child {
+  margin-bottom: 0;
+}
+
+.account-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 18px;
+}
+
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.account-row h4 {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 4px;
+}
+
+.account-row p {
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+.account-btn {
+  border: none;
+
+  background: #f3f4f6;
+
+  color: #374151;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.account-btn:hover {
+  background: #e5e7eb;
+}
+
+.verification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.verification-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 20px;
+}
+
+.verification-card h4 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+
+  font-size: 16px;
+}
+
+.verification-card p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.verification-badge {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.danger-zone {
+  border-top: 1px solid #e5e7eb;
+
+  padding-top: 28px;
+}
+
+.danger-btn {
+  border: none;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.danger-btn:hover {
+  background: #fecaca;
+}
+
+@media (max-width: 900px) {
+  .verification-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,54 @@
+.help-support-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-support-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 18px 0;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.help-support-item:last-child {
+  border-bottom: none;
+}
+
+.help-support-item h4 {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 4px;
+}
+
+.help-support-item p {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.help-chevron {
+  font-size: 24px;
+
+  color: #9ca3af;
+
+  line-height: 1;
+}
+
+.help-support-item:hover .help-chevron {
+  color: #ec4899;
+}
