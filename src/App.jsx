@@ -7,6 +7,8 @@ import Following from "./Pages/Following/Following";
 import Bookings from "./Pages/Bookings/Bookings";
 import Boutiques from "./Pages/Boutiques/Boutiques";
 import Messages from "./Pages/Messages/Messages";
+import Settings from "./Pages/Settings/Settings";
+import Profile from "./Pasges/Profile/Profile";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path="/bookings" element={<Bookings />} />
       <Route path="/boutiques" element={<Boutiques />} />
       <Route path="/messages" element={<Messages />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 }
