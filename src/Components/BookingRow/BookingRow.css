@@ -51,3 +51,21 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.reschedule-btn {
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: black;
+  color: white;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.reschedule-btn:hover {
+  opacity: .9;
+}

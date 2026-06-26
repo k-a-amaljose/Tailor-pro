@@ -3,8 +3,8 @@ import "./BookingBenefits.css";
 import {
   CalendarClock,
   ShieldCheck,
-  Bell,
-  BadgeCheck
+  Scissors,
+  Ruler,
 } from "lucide-react";
 
 function BookingBenefits() {
@@ -13,22 +13,22 @@ function BookingBenefits() {
 
       <div className="benefit">
         <CalendarClock />
-        <h4>Easy Rescheduling</h4>
+        <h4>Flexible Scheduling</h4>
       </div>
 
       <div className="benefit">
-        <BadgeCheck />
-        <h4>Instant Confirmations</h4>
+        <Scissors />
+        <h4>Skilled Tailors</h4>
+      </div>
+
+      <div className="benefit">
+        <Ruler />
+        <h4>Custom Measurements</h4>
       </div>
 
       <div className="benefit">
         <ShieldCheck />
-        <h4>Secure & Reliable</h4>
-      </div>
-
-      <div className="benefit">
-        <Bell />
-        <h4>Reminder Alerts</h4>
+        <h4>Trusted Service</h4>
       </div>
 
     </div>

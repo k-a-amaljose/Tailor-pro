@@ -27,14 +27,18 @@ function FeedGrid({ searchTerm = "" }) {
 
       {filteredPosts.length > 0 ? (
 
-        filteredPosts.map((item) => (
+        filteredPosts.map(
+          (item, index) => (
 
-          <FeedCard
-            key={item.id}
-            item={item}
-          />
+            <FeedCard
+              key={item.id}
+              item={item}
+              index={index}
+              posts={filteredPosts}
+            />
 
-        ))
+          )
+        )
 
       ) : (
 

@@ -4,12 +4,17 @@ import { useState } from "react";
 import {
   Heart,
   Bookmark,
-  Play
+  Play,
+  MessageCircle
 } from "lucide-react";
 
 import FeedModal from "../FeedModal/FeedModal";
 
-function FeedCard({ item }) {
+function FeedCard({
+  item,
+  index,
+  posts,
+}) {
 
   const [liked, setLiked] =
     useState(false);
@@ -23,9 +28,36 @@ function FeedCard({ item }) {
   const [likeCount, setLikeCount] =
     useState(item.likes || 0);
 
-  const handleLike = (
-    e
-  ) => {
+  const formatLikes = (num) => {
+
+    if (num >= 1000000000) {
+      return (
+        num / 1000000000
+      )
+        .toFixed(1)
+        .replace(".0", "") + "B";
+    }
+
+    if (num >= 1000000) {
+      return (
+        num / 1000000
+      )
+        .toFixed(1)
+        .replace(".0", "") + "M";
+    }
+
+    if (num >= 1000) {
+      return (
+        num / 1000
+      )
+        .toFixed(1)
+        .replace(".0", "") + "K";
+    }
+
+    return num;
+  };
+
+  const handleLike = (e) => {
 
     e.stopPropagation();
 
@@ -42,9 +74,7 @@ function FeedCard({ item }) {
     setLiked(!liked);
   };
 
-  const handleSave = (
-    e
-  ) => {
+  const handleSave = (e) => {
 
     e.stopPropagation();
 
@@ -59,8 +89,6 @@ function FeedCard({ item }) {
           setShowModal(true)
         }
       >
-
-        {/* SAVE */}
 
         <button
           className={`save-btn ${
@@ -83,8 +111,6 @@ function FeedCard({ item }) {
           />
         </button>
 
-        {/* IMAGE */}
-
         <img
           src={item.image}
           alt={
@@ -93,46 +119,60 @@ function FeedCard({ item }) {
           className="feed-image"
         />
 
-        {/* VIDEO ICON */}
-
         {item.type ===
           "video" && (
           <div className="video-icon">
-            <Play
-              size={18}
-            />
+            <Play size={18} />
           </div>
         )}
 
-        {/* INFO */}
-
         <div className="feed-info">
 
-          <button
-            className="likes-row like-btn"
-            onClick={
-              handleLike
-            }
+          <div
+            style={{
+              display: "flex",
+              gap: "15px",
+              alignItems: "center",
+            }}
           >
-            <Heart
-              size={18}
-              fill={
-                liked
-                  ? "#ff4d94"
-                  : "none"
-              }
-              color={
-                liked
-                  ? "#ff4d94"
-                  : "currentColor"
-              }
-            />
 
-            <span>
-              {likeCount}
-            </span>
+            <button
+              className="likes-row like-btn"
+              onClick={
+                handleLike
+              }
+            >
+              <Heart
+                size={18}
+                fill={
+                  liked
+                    ? "#ff4d94"
+                    : "none"
+                }
+                color={
+                  liked
+                    ? "#ff4d94"
+                    : "currentColor"
+                }
+              />
 
-          </button>
+              <span>
+                {formatLikes(
+                  likeCount
+                )}
+              </span>
+
+            </button>
+
+            <div className="likes-row">
+              <MessageCircle size={18} />
+
+              <span>
+                {item.comments ? item.comments.length : 0}
+              </span>
+            </div>
+
+          </div>
 
           <div className="tailor-row">
 
@@ -161,15 +201,20 @@ function FeedCard({ item }) {
       </div>
 
       {showModal && (
+
         <FeedModal
           item={item}
+          posts={posts}
+          currentIndex={index}
           onClose={() =>
             setShowModal(
               false
             )
           }
         />
+
       )}
+
     </>
   );
 }

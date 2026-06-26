@@ -17,6 +17,14 @@ export const upcomingBookings = [
     time: "11:00 AM",
 
     status: "Confirmed",
+
+ rescheduleRequested: false,
+
+  requestedDate: "",
+  requestedTime: "",
+
+  confirmedDate: "",
+  confirmedTime: ""
   },
 
   {
@@ -32,6 +40,14 @@ export const upcomingBookings = [
     time: "04:30 PM",
 
     status: "Confirmed",
+
+     rescheduleRequested: false,
+
+  requestedDate: "",
+  requestedTime: "",
+
+  confirmedDate: "",
+  confirmedTime: ""
   },
 
   {
@@ -47,6 +63,14 @@ export const upcomingBookings = [
     time: "03:00 PM",
 
     status: "Pending",
+
+     rescheduleRequested: false,
+
+  requestedDate: "",
+  requestedTime: "",
+
+  confirmedDate: "",
+  confirmedTime: ""
   }
 ];
 
@@ -57,9 +81,22 @@ export const completedBookings = [
     location: "Koramangala, Bangalore",
     image: sampleDress4,
 
+    category: "Consultation",
     service: "Anarkali Suit Consultation",
+
     date: "05 May 2026",
-  }
+    time: "02:00 PM",
+
+    status: "Completed",
+
+     rescheduleRequested: false,
+
+  requestedDate: "",
+  requestedTime: "",
+
+  confirmedDate: "",
+  confirmedTime: ""
+  },
 ];
 
 export const cancelledBookings = [
@@ -69,7 +106,20 @@ export const cancelledBookings = [
     location: "Indiranagar, Bangalore",
     image: sampleDress1,
 
+    category: "Fitting",
     service: "Lehenga Fitting",
+
     date: "26 Apr 2026",
-  }
+    time: "10:30 AM",
+
+    status: "Cancelled",
+
+     rescheduleRequested: false,
+
+  requestedDate: "",
+  requestedTime: "",
+
+  confirmedDate: "",
+  confirmedTime: ""
+  },
 ];

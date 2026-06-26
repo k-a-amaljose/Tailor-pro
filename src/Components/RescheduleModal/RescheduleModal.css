@@ -1,0 +1,171 @@
+.reschedule-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+}
+
+.reschedule-modal {
+  width: 430px;
+  max-width: 95%;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  animation: popup .25s ease;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.reschedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-row h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.current-date-box {
+  background: #f8f8f8;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  margin-bottom: 20px;
+}
+
+.current-date-box span {
+  display: block;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.current-date-box strong {
+  font-size: 17px;
+}
+
+.react-calendar {
+  width: 100%;
+
+  border: none !important;
+
+  font-family: inherit;
+}
+
+.react-calendar__tile--active {
+  background: black !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: #ececec !important;
+}
+
+.selected-date {
+  text-align: center;
+
+  margin-top: 25px;
+}
+
+.selected-date h3 {
+  color: #d62828;
+
+  margin-top: 8px;
+}
+
+.reschedule-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+
+  padding: 13px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: .2s;
+}
+
+.cancel-btn {
+  background: white;
+
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+.confirm-btn {
+  border: none;
+
+  background: black;
+
+  color: white;
+}
+
+.confirm-btn:hover {
+  opacity: .9;
+}
+
+@media (max-width:768px) {
+
+  .reschedule-modal {
+    width: 95%;
+
+    padding: 18px;
+  }
+
+  .reschedule-buttons {
+    flex-direction: column;
+  }
+}
