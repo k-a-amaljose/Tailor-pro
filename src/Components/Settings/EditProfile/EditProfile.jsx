@@ -1,8 +1,22 @@
+import { useState } from "react";
 import "./EditProfile.css";
-
 import SettingsCard from "../SettingsCard/SettingsCard";
 
 function EditProfile({ profile }) {
+  if (!profile) {
+    return <p>No profile data.</p>;
+  }
+  
+  const [formData, setFormData] = useState(profile);
+
+  const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
   return (
     <SettingsCard
       title="Edit Profile"
@@ -10,8 +24,8 @@ function EditProfile({ profile }) {
     >
       <div className="profile-photo-section">
         <img
-          src={profile.profilePhoto}
-          alt={`${profile.fullName} profile`}
+          src={profile.profileIhoto}
+          alt={`${profile.name} profile`}
           className="profile-photo"
         />
 
@@ -32,8 +46,8 @@ function EditProfile({ profile }) {
 
           <input
             type="text"
-            value={profile.fullName}
-            readOnly
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
 
@@ -42,8 +56,9 @@ function EditProfile({ profile }) {
 
           <input
             type="text"
-            value={profile.username}
-            readOnly
+            value={formData.username}
+            onChange={handleChange}
+            
           />
         </div>
       </div>
@@ -53,8 +68,9 @@ function EditProfile({ profile }) {
 
         <textarea
           rows="5"
-          value={profile.bio}
-          readOnly
+          value={formData.bio}
+          onChange={handleChange}
+          
         />
       </div>
 
@@ -64,8 +80,8 @@ function EditProfile({ profile }) {
 
           <input
             type="email"
-            value={profile.email}
-            readOnly
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -74,8 +90,8 @@ function EditProfile({ profile }) {
 
           <input
             type="tel"
-            value={profile.phone}
-            readOnly
+            value={formData.phone}
+            onChange={handleChange}
           />
         </div>
       </div>
@@ -86,8 +102,8 @@ function EditProfile({ profile }) {
 
           <input
             type="text"
-            value={profile.location}
-            readOnly
+            value={formData.location}
+            onChange={handleChange}
           />
         </div>
 
@@ -96,8 +112,8 @@ function EditProfile({ profile }) {
 
           <input
             type="text"
-            value={profile.website}
-            readOnly
+            value={formData.website}
+            onChange={handleChange}
           />
         </div>
       </div>
@@ -107,8 +123,8 @@ function EditProfile({ profile }) {
 
         <input
           type="text"
-          value={profile.businessCategory}
-          readOnly
+          value={formData.businessCategory}
+          onChange={handleChange}
         />
       </div>
 

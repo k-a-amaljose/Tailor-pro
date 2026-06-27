@@ -41,11 +41,6 @@ function SettingsSidebar({
       icon: SlidersHorizontal,
     },
     {
-      id: "blocked",
-      label: "Blocked Accounts",
-      icon: Ban,
-    },
-    {
       id: "security",
       label: "Security",
       icon: Lock,
