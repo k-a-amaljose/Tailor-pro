@@ -31,6 +31,7 @@ const feedData = [
         profile: "https://i.pravatar.cc/40?img=1",
         text: "Absolutely stunning work ❤️",
         rating: 5,
+        liked: false,
         likes: 42,
         date: "2 days ago",
       },
@@ -41,6 +42,7 @@ const feedData = [
         text: "The embroidery is beautiful.",
         rating: 4,
         likes: 17,
+        liked: false,
         date: "1 day ago",
       },
       {
@@ -50,6 +52,7 @@ const feedData = [
         text: "Would definitely order this design.",
         rating: 5,
         likes: 8,
+        liked: false,
         date: "12 hours ago",
       },
     ],
@@ -78,6 +81,7 @@ const feedData = [
         text: "Love this color combination.",
         rating: 5,
         likes: 24,
+        liked: false,
         date: "4 days ago",
       },
       {
@@ -87,6 +91,7 @@ const feedData = [
         text: "Looks premium and elegant.",
         rating: 4,
         likes: 12,
+        liked: false,
         date: "3 days ago",
       },
       {
@@ -96,6 +101,7 @@ const feedData = [
         text: "Would wear this for an event.",
         rating: 5,
         likes: 9,
+        liked: false,
         date: "2 days ago",
       },
     ],
@@ -124,6 +130,7 @@ const feedData = [
         text: "Perfect festive outfit.",
         rating: 5,
         likes: 33,
+        liked: false,
         date: "5 days ago",
       },
       {
@@ -133,6 +140,7 @@ const feedData = [
         text: "Love the detailing.",
         rating: 4,
         likes: 14,
+        liked: false,
         date: "4 days ago",
       },
       {
@@ -142,6 +150,7 @@ const feedData = [
         text: "Looks amazing.",
         rating: 5,
         likes: 11,
+        liked: false,
         date: "3 days ago",
       },
     ],
@@ -170,6 +179,7 @@ const feedData = [
         text: "Modern and stylish.",
         rating: 5,
         likes: 16,
+        liked: false,
         date: "1 week ago",
       },
       {
@@ -179,6 +189,7 @@ const feedData = [
         text: "Would love to get one stitched.",
         rating: 4,
         likes: 10,
+        liked: false,
         date: "6 days ago",
       },
       {
@@ -188,6 +199,7 @@ const feedData = [
         text: "Clean tailoring work.",
         rating: 5,
         likes: 7,
+        liked: false,
         date: "5 days ago",
       },
     ],
