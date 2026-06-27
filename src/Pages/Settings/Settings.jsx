@@ -19,13 +19,25 @@ import BusinessSettings from "../../Components/Settings/BusinessSettings/Busines
 function Settings() {
   const [active, setActive] = useState("profile");
 
+  const profile = {
+    profilePhoto:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    fullName: "Label",
+    username: "label",
+    bio: "Designer boutique specialising in custom wear.",
+    email: "label@example.com",
+    phone: "+60 12-345 6789",
+    location: "Kuala Lumpur, Malaysia",
+    website: "https://label.com",
+    businessCategory: "Fashion Designer",
+  };
+  
   const sections = {
-    profile: <EditProfile />,
+    profile: <EditProfile profile={profile} />,
     account: <AccountSettings />,
     privacy: <PrivacySettings />,
     notifications: <NotificationSettings />,
     preferences: <PreferenceSettings />,
-    blocked: <BlockedAccounts />,
     security: <SecuritySettings />,
     business: <BusinessSettings />,
   };
@@ -42,8 +54,8 @@ function Settings() {
 
         <div className="settings-layout">
           <SettingsSidebar
-            active={active}
-            setActive={setActive}
+            activeSection={active}
+            setActiveSection={setActive}
           />
 
           {sections[active]}

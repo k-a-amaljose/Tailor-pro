@@ -1,15 +1,16 @@
-import "./ProfilePage.css";
+import "./Profile.css";
 
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
-import SavedBoardsSection from "../../components/SavedBoardsSection/SavedBoardsSection";
-import UpComingAppts from "../../components/UpComingAppts/UpComingAppts";
+import Sidebar from "../../Components/Sidebar/Sidebar";
+import ProfileCard from "../../Components/ProfileCard/ProfileCard";
+import SavedBoards from "../../Components/SavedBoards/SavedBoards";
+import UpComingAppts from "../../Components/UpComingAppts/UpComingAppts";
 
-function ProfilePage() {
+function Profile() {
   const profile = {
     id: 1,
-    name: "Label Ananya",
-    username: "labelananya",
-    bio: "Designer boutique specialising in custom bridal and ethnic wear.",
+    name: "Label",
+    username: "label",
+    bio: "Designer boutique specialising in custom wear.",
     profileImage:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
     followers: 1240,
@@ -64,21 +65,24 @@ function ProfilePage() {
 
   return (
     <div className="profile-page">
+      <Sidebar />
 
-      <ProfileCard
-        profile={profile}
-      />
+      <main className="profile-content">
+        <ProfileCard
+          avatar={profile.profileImage}
+          username={profile.username}
+          bio={profile.bio}
+          followers={profile.followers}
+          following={profile.following}
+          posts={profile.boards}
+        />
 
-      <SavedBoardsSection
-        boards={boards}
-      />
+        <SavedBoards boards={boards} />
 
-      <UpComingAppts
-        appointments={appointments}
-      />
-
+        <UpComingAppts appointments={appointments} />
+      </main>
     </div>
   );
 }
 
-export default ProfilePage;
+export default Profile;
