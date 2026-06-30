@@ -1,0 +1,69 @@
+.saved-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Right side */
+.saved-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Search bar + Profile + Saved Header */
+.fixed-content {
+  flex-shrink: 0;
+  background: white;
+  z-index: 10;
+}
+
+/* Search + Profile */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+/* Saved heading */
+.feed-header {
+  margin-bottom: 20px;
+}
+
+.feed-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.feed-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ONLY THIS SCROLLS */
+.feed-scroll {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 8px;
+}
+
+/* Optional scrollbar styling */
+.feed-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.feed-scroll::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 20px;
+}

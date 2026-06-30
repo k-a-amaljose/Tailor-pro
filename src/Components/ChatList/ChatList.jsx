@@ -1,7 +1,6 @@
 import "./ChatList.css";
-import { chats } from "../../data/messages";
 
-function ChatList({ selectedChat, setSelectedChat }) {
+function ChatList({ chats, selectedChat, setSelectedChat }) {
   return (
     <div className="chat-list">
       {chats.map((chat) => (

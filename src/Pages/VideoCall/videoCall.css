@@ -1,0 +1,58 @@
+.video-call-container {
+  width: 100%;
+  height: 100vh;
+  background: #111827;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevents unwanted layout leaking or scrolling */
+}
+
+.video-screen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 0; /* Important: Allows the flex child to shrink properly if needed */
+}
+
+.local-video {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  max-height: 70vh; /* Keeps the container proportional inside smaller viewports */
+  border-radius: 20px;
+  background: black;
+  object-fit: cover; /* Prevents black bars by scaling video to fill its box boundaries */
+}
+
+.video-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(0, 0, 0, .4);
+  flex-shrink: 0; /* Guarantees the action drawer stays locked to the bottom */
+}
+
+.video-controls button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transition: transform .2s ease;
+}
+
+.video-controls button:hover {
+  transform: scale(1.08);
+}
+
+.end-call {
+  background: #ef4444 !important;
+  color: white;
+}

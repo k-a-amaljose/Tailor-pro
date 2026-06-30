@@ -21,6 +21,12 @@
 .chat-item.active {
   background: #fdebf5;
   border-radius: 16px;
+  color: #ec4899;
+}
+
+.chat-item.active p {
+  color: #ec4899;
+  opacity: 0.8;
 }
 
 .chat-avatar {

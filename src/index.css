@@ -1,1 +1,17 @@
-/** Need to change everything in it **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevents global scrolling */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Ensure no default margins on common elements */
+h1, h2, h3, h4, p {
+  margin: 0;
+}
