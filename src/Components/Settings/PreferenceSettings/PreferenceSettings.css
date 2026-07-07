@@ -1,0 +1,129 @@
+.preferences-section {
+  margin-bottom: 32px;
+}
+
+.preferences-section:last-child {
+  margin-bottom: 0;
+}
+
+.preferences-section h3 {
+  margin-bottom: 18px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.preferences-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.preferences-row:last-child {
+  border-bottom: none;
+}
+
+.preferences-row h4 {
+  margin-bottom: 4px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.preferences-row p {
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+.preferences-select {
+  min-width: 220px;
+
+  padding: 10px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 14px;
+}
+
+.preferences-switch {
+  position: relative;
+
+  width: 52px;
+  height: 28px;
+
+  flex-shrink: 0;
+}
+
+.preferences-switch input {
+  opacity: 0;
+
+  width: 0;
+  height: 0;
+}
+
+.preferences-slider {
+  position: absolute;
+
+  inset: 0;
+
+  background: #d1d5db;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.preferences-slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  left: 3px;
+  top: 3px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transition: 0.25s ease;
+}
+
+.preferences-switch input:checked + .preferences-slider {
+  background: #ec4899;
+}
+
+.preferences-switch
+  input:checked
+  + .preferences-slider::before {
+  transform: translateX(24px);
+}
+
+@media (max-width: 900px) {
+  .preferences-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preferences-select {
+    width: 100%;
+  }
+}

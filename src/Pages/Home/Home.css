@@ -19,3 +19,34 @@
 .top-bar > *:first-child {
   flex: 1;
 }
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Add this to the bottom of your Home.css */
+
+.main-display-scroll-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* This will provide exact spacing between the AdBanner, Reels, etc. */
+  margin-top: 30px; /* Space between the top bar and the Ad Banner */
+  width: 100%;
+  max-width: 1200px; /* Keeps the UI from stretching too far on massive screens */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+}

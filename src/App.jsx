@@ -9,6 +9,10 @@ import Boutiques from "./Pages/Boutiques/Boutiques";
 import Messages from "./Pages/Messages/Messages";
 import Saved from "./Pages/Saved/Saved";
 import VideoCall from "./Pages/VideoCall/videoCall";
+import Notifications from "./Pages/Notifications/Notifications";
+import Settings from "./Pages/Settings/Settings";
+import Profile from "./Pages/Profile/Profile";
+
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
       <Route path="/messages" element={<Messages />} />
       <Route path="/saved" element={<Saved />} />
       <Route path="/video-call" element={<VideoCall />} />
+      <Route path="/Notifications" element={<Notifications />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/profile" element={<Profile />} />
+
     </Routes>
   );
 }

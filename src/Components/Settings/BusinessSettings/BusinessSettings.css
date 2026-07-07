@@ -1,0 +1,117 @@
+.business-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.business-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.business-field label {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #374151;
+}
+
+.business-field input,
+.business-field textarea,
+.business-field select {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  background: white;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.business-field input:focus,
+.business-field textarea:focus,
+.business-field select:focus {
+  border-color: #ec4899;
+}
+
+.business-field textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.instagram-input {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.instagram-input span {
+  padding: 14px;
+
+  background: #f9fafb;
+
+  color: #6b7280;
+
+  border-right: 1px solid #d1d5db;
+}
+
+.instagram-input input {
+  border: none;
+  border-radius: 0;
+
+  flex: 1;
+}
+
+.business-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 12px;
+}
+
+.business-save-btn {
+  border: none;
+
+  background: #ec4899;
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.business-save-btn:hover {
+  background: #db2777;
+}
+
+@media (max-width: 900px) {
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+}
